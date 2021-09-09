@@ -1,5 +1,5 @@
 imimport java.util.Scanner;
-
+//@version 1.0
  class Pig_Latin {
 
 	 String add1="way";
