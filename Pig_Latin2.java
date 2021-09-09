@@ -48,7 +48,7 @@ duplica y añade al final y algunos otros errores*/
         primL=respuesta.charAt(0);
         secL=respuesta.charAt(1);
         
-         {
+         {//DETECTA LOS 3 CASOS PERFECTAMENTE, SOLO FALTA CORREGIR EL COMO MUEVE LAS LETRAS DENTRO DE LAS CADENAS DE TEXTO
         if (primL != vowels[0] && primL != vowels[1] && primL !=vowels[2]  && primL !=vowels[3]  && primL !=vowels[4]) {
         	if (secL != vowels[0] && secL != vowels[1] && secL !=vowels[2]  && secL !=vowels[3]  && secL !=vowels[4]) {
         		String word1;
@@ -66,7 +66,7 @@ duplica y añade al final y algunos otros errores*/
         		String word3;
         		word3=word.concat(add2);
         		System.out.print(word3+" ");
-        	}		
+        	}	
         	}
         }
   }
