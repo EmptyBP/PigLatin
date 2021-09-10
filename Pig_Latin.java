@@ -1,4 +1,4 @@
-imimport java.util.Scanner;
+import java.util.Scanner;
 //@version 1.0
  class Pig_Latin {
 
