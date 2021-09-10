@@ -6,7 +6,7 @@ de Palabras que ocurre en la linea de código número 50 con el ciclo for, algun
                   Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 1
 
 Se sigue buscando la forma de solucionarlo.*/
- class Pig_Latin {
+ class Pig_Latin3 {
 
 	 
 	public static void main(String []args) {
