@@ -1,13 +1,14 @@
 import java.util.Scanner;
-//@version 1.0
+//@Final Version, the code is already completed and working succesfully!
  class Pig_Latin {
 
-	 String add1="way";
-	 String add22= "ay";
 	 
-	public void Palabra(String[] args) {
+	public static void main(String []args) {
 		Scanner in = new Scanner (System.in);
-		
+
+		 String add1="way";
+		 String add2= "ay";
+		 
 		char[] letters= new char [21]; //Guarda las consonantes del abecedario / Save all consonants letters from the alphabet
 		
 		char[] vowels= {'a','e','i','o','u'}; //Para vocales / Save vowels
@@ -27,7 +28,7 @@ import java.util.Scanner;
          letters[number]=alphabet;
         number++;
         }
-        
+    }
         //Aquí empieza la interacción con el usuario / At this point Starts the interaction with the user
         
         System.out.println("¡Bienvenido a el traductor Pig Latín, ingresa el texto que desees (en inglés) y será traducido"
@@ -35,29 +36,53 @@ import java.util.Scanner;
     
         System.out.print("Adelante, ingresa un texto, recordando únicamente que debe ser en inglés: ");
         respuesta=in.nextLine();
+        respuesta=respuesta.toLowerCase();
         
+        String[] words =respuesta.split("\\s+");
+        String espacio="";
         
-        String[] words = respuesta.split(" ");
-
         for (String word : words) {
         	
-        }
-        primL=respuesta.charAt(0);
-        secL=respuesta.charAt(1);
+        primL=word.charAt(0);
         
-        if (primL != vowels[0] && primL != vowels[1] && primL !=vowels[2]  && primL !=vowels[3]  && primL !=vowels[4]) {
+        
+        if(primL != vowels[0] && primL != vowels[1] && primL !=vowels[2]  && primL !=vowels[3]  && primL !=vowels[4]) {
+        	secL=word.charAt(1);
+        	if (secL != vowels[0] && secL != vowels[1] && secL !=vowels[2]  && secL !=vowels[3]  && secL !=vowels[4]) {
+        		String word1="";
+        		for (int i=2; i<word.length();i++) {
+        			word1=word1 + word.charAt(i);
+        		}
+        		word1=word1+word.charAt(0)+word.charAt(1)+add2;
+        		System.out.print(word1+" ");
         	
-        }
-  }
-		
-		/*Es todo lo que llevo hasta ahora, en este punto debo cambiar el primL y secL para que trabajen con un ciclo for y la decisión lógica de if para ir por cada 
-		* words[number].charAt(0), mismo caso con charAt(1) */
-	
-		}
-	public static void main (String []args) {
+        	}
+        		
+        		else {
+        				String word2="";
+        				for (int i=1; i<word.length();i++) {
+            			word2=word2 + word.charAt(i);
+        				}
+        				word2=word2+word.charAt(0)+add2;
+        				System.out.print(word2+" ");
+        				
+        				
+        		}
+        } 
+        if (primL == vowels[0] || primL == vowels[1] || primL ==vowels[2]  || primL ==vowels[3]  || primL ==vowels[4]){
+        	
+        		String word5="";
+        		for (int i=1; i<word.length();i++) {
+        			word5=word5 + word.charAt(i);
+        		}
+        		word5=word5+word.charAt(0)+add1;
+        		System.out.print(word5+" ");
+        	
+        		}
         
-        
+        	}
         }
- }
-	
+	}
+ 
+  
 
