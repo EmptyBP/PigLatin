@@ -9,8 +9,7 @@ import java.util.Scanner;
 		 String add1="way";
 		 String add2= "ay";
 		 
-		char[] letters= new char [21]; //Guarda las consonantes del abecedario / Save all consonants letters from the alphabet
-		
+
 		char[] vowels= {'a','e','i','o','u'}; //Para vocales / Save vowels
 		
 		String respuesta;  
@@ -19,15 +18,6 @@ import java.util.Scanner;
 		/*Estos char se usarán para la función lógica del Pig Latin entre consonanates y vocales 
 		 * Those char will be use as logic conditions for Pig latin between consonants and vowels*/
 		
-		//Ciclo for para guardar las consonantes del alfabeto / loop for to save alphabet consonants
-		int number=0;
-		for(char alphabet = 'a'; alphabet <='z'; alphabet++ )
-    {
-        if (alphabet != vowels[0] && alphabet != vowels[1] && alphabet !=vowels[2]  && alphabet !=vowels[3]  && alphabet !=vowels[4]) {
-        	 
-         letters[number]=alphabet;
-        number++;
-        }
     }
         //Aquí empieza la interacción con el usuario / At this point Starts the interaction with the user
         
