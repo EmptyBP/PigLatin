@@ -21,7 +21,7 @@ import java.util.Scanner;
     }
         //Aquí empieza la interacción con el usuario / At this point Starts the interaction with the user
         
-        System.out.println("¡Bienvenido a el traductor Pig Latín, ingresa el texto que desees (en inglés) y será traducido"
+        System.out.println("¡Bienvenido al traductor Pig Latín, ingresa el texto que desees (en inglés) y será traducido"
         		+ "al idioma de Pig Latín que nadie habla pero suena gracioso!");
     
         System.out.print("Adelante, ingresa un texto, recordando únicamente que debe ser en inglés: ");
@@ -61,12 +61,12 @@ import java.util.Scanner;
         } 
         if (primL == vowels[0] || primL == vowels[1] || primL ==vowels[2]  || primL ==vowels[3]  || primL ==vowels[4]){
         	
-        		String word5="";
+        		String word3="";
         		for (int i=1; i<word.length();i++) {
-        			word5=word5 + word.charAt(i);
+        			word3=word3 + word.charAt(i);
         		}
-        		word5=word5+word.charAt(0)+add1;
-        		System.out.print(word5+" ");
+        		word3=word3+word.charAt(0)+add1;
+        		System.out.print(word3+" ");
         	
         		}
         
