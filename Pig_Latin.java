@@ -28,18 +28,20 @@ import java.util.Scanner;
         respuesta=in.nextLine();
         respuesta=respuesta.toLowerCase();
         
-        String[] words =respuesta.split("\\W+");
+        String[] words =respuesta.split("\\W+"); //Divide palabras ignorando cosas como espacios, salto de linea o signos de puntuación
         
         for (String word : words) {
         	
         primL=word.charAt(0);
         lenght1=word.length();
         //consonantes
+	//*************************************************************************************************************
         if(primL != vowels[0] && primL != vowels[1] && primL !=vowels[2]  && primL !=vowels[3]  && primL !=vowels[4]) {
         	secL=word.charAt(1);
         	
         	
         	//Excepcion
+		//*************************************************************************************************************
         	if (secL != vowels[0] && secL != vowels[1] && secL !=vowels[2]  && secL !=vowels[3] && lenght1>=3) {
         		terL=word.charAt(2);
         		if (lenght1<3) {
@@ -53,6 +55,7 @@ import java.util.Scanner;
                 		}
         		
         		//3 consonantes
+			//*************************************************************************************************************
         		else if (terL != vowels[0] && terL != vowels[1] && terL !=vowels[2]  && terL !=vowels[3]  && terL !=vowels[4]) {
             		String word2="";
             		for (int i=3; i<word.length();i++) {
@@ -65,6 +68,7 @@ import java.util.Scanner;
         		}
         		
         		//2 consonantes
+			//*************************************************************************************************************
         		else if (terL == vowels[0] || terL == vowels[1] || terL == vowels[2]  || terL == vowels[3]  || terL == vowels[4]) {
         		String word1="";
         		for (int i=2; i<word.length();i++) {
@@ -77,6 +81,7 @@ import java.util.Scanner;
         		}
         	
         		//1 consonante
+			//*************************************************************************************************************
         		else {
         				String word3="";
         				for (int i=1; i<word.length();i++) {
