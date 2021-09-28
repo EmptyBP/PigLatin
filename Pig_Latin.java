@@ -37,10 +37,11 @@ import java.util.Scanner;
         	consonant_pot++;//valor de 1
         	
         	
-        	//Excepcion para Palabras de 3 o menos caracteres
+        	
         	if (word.charAt(consonant_pot) != vowels[0] && word.charAt(consonant_pot) != vowels[1] && word.charAt(consonant_pot) !=vowels[2] 
         			&& word.charAt(consonant_pot) !=vowels[3] && word.charAt(consonant_pot) != vowels[4] && lenght1>=3 ) {
         		consonant_pot++;//valor de 2
+			//Excepcion para Palabras de 3 o menos caracteres, por ejemplo, para palabras como "He", "Me", "Be", entre otras...
         		if (lenght1<3) {
             		String exception="";
             		for (int i=1; i<word.length();i++) {
