@@ -1,8 +1,6 @@
 import java.util.Scanner;
 //@Final version, already working succesfully
   class Pig_Latin {
-
-	 
 	public static void main(String []args) {
 		Scanner in = new Scanner (System.in);
 
@@ -12,9 +10,6 @@ import java.util.Scanner;
 		
 		String respuesta;  
 
-		//Estos char se usarán para la función lógica del Pig Latin entre consonanates y vocales 
-		
-        
         System.out.println("¡Bienvenido al traductor Pig Latín, ingresa el texto que desees (en inglés) y será traducido"
         		+ "al idioma de Pig Latín que nadie habla pero suena gracioso!");
     
@@ -36,7 +31,6 @@ import java.util.Scanner;
         //consonantes
         if(word.charAt(0) != vowels[0] && word.charAt(0) != vowels[1] && word.charAt(0) !=vowels[2] 
     			&& word.charAt(0) !=vowels[3] && word.charAt(0) != vowels[4]) {
-   
         	
         	if (word.charAt(1) != vowels[0] && word.charAt(1) != vowels[1] && word.charAt(1) !=vowels[2] 
         			&& word.charAt(1) !=vowels[3] && word.charAt(1) != vowels[4] && lenght1>=3 ) {
@@ -46,7 +40,6 @@ import java.util.Scanner;
             		for (int i=1; i<word.length();i++) {
             			exception=exception + word.charAt(i);
             		}
-            		
             		exception=exception+word.charAt(0)+"ay";
                 		System.out.print(exception+" ");
                 		}
@@ -58,12 +51,9 @@ import java.util.Scanner;
             		for (int i=3; i<word.length();i++) {
             			word2=word2 + word.charAt(i);
             		}
-            		
             		word2=word2+word.charAt(0)+word.charAt(1)+word.charAt(2)+"ay";
             		System.out.print(word2+" ");
-            		
-        		}
-        		
+            		}
         		//2 consonantes
         		else if (word.charAt(2) == vowels[0] || word.charAt(2) == vowels[1] || word.charAt(2) == vowels[2]
         				|| word.charAt(2) == vowels[3]  || word.charAt(2) == vowels[4]) {
@@ -83,17 +73,13 @@ import java.util.Scanner;
         				}
         				word3=word3+word.charAt(0)+"ay";
         				System.out.print(word3+" ");
-	
         		}
         } 
         //Comprobante de vocal
         if (word.charAt(0) == vowels[0] ||word.charAt(0) == vowels[1] || word.charAt(0) ==vowels[2]  
         		|| word.charAt(0) ==vowels[3]  || word.charAt(0) ==vowels[4]){
-        	
         		System.out.print(word.concat("way")+" ");
-        	
         		}
         }
         }
 	}
- 
